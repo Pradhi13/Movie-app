@@ -11,11 +11,11 @@ export class MoviesService {
 
   constructor(private http: Http) {}
 
-  searchMovie(movieName: string){
-  	console.log("inside service");
+  searchMovie( movieName: string ) {
+  console.log( 'inside service' );
 
     return this.http
-               .get('http://www.omdbapi.com/?s='+movieName)
+               .get('http://www.omdbapi.com/?s=' +movieName)
                .map(response => response.json()['Search']);
   }
 }

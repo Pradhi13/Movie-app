@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'search-details',
+  selector: 'app-search-details',
   templateUrl: './search.component.html',
 })
 export class SearchComponent  {
