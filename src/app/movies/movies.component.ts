@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { MoviesService } from './movies.service';
+
+
 @Component({
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
@@ -12,10 +14,13 @@ moviesName = [];
   constructor(
     private MoviesService: MoviesService,
     private route: ActivatedRoute) {}
-  ngOnInit(): void {
 
+  ngOnInit(): void {
+// match the param to the service to get the result
     this.route.params
       .switchMap((params: Params) => this.MoviesService.searchMovie(params['movieName']))
+      // stores the data in a moviesName array
       .subscribe(moviesName => this.moviesName = moviesName);
   }
+
 }

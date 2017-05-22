@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Movie App';
+  // deals with title
+ title = 'Movie App';
+/* constructor(private logger:Logger)
+//   {
+//     // let log4ts = require('log4ts');
+//     // let logger = log4ts.getLogger();
+//     this.logger.debug("inside AppComponent")
+//
+  }*/
 }

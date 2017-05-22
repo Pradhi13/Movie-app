@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home.component';
+import { NavComponent } from './Nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MoviesService } from './movies/movies.service';
@@ -14,11 +14,10 @@ import { MoviesService } from './movies/movies.service';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    NavComponent,
     SearchComponent,
     MoviesComponent,
   ],

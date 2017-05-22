@@ -1,4 +1,4 @@
-import { Movie } from './movie';
+import { Movie } from './model/movie';
 /*Test for Movie model
 Update test code to instansiate new Movie in beforEach() block*/
 describe('Movie', () => {
