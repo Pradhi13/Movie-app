@@ -2,9 +2,16 @@ img
 {
 	width: 300px;
 	height: 400px;
+	padding-left: 70px;
 }
 #card
 {
 width: 500px;
 float: left;
+}
+
+#text
+{
+	width: 200px;
+	height: 100px;
 }

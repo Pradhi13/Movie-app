@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { MoviesService } from './movies.service';
+import {Observable} from 'rxjs/Observable';
 
 
 @Component({
@@ -11,6 +12,9 @@ import { MoviesService } from './movies.service';
 })
 export class MoviesComponent implements OnInit {
 moviesName = [];
+
+a=[];
+
   constructor(
     private MoviesService: MoviesService,
     private route: ActivatedRoute) {}
@@ -21,6 +25,24 @@ moviesName = [];
       .switchMap((params: Params) => this.MoviesService.searchMovie(params['movieName']))
       // stores the data in a moviesName array
       .subscribe(moviesName => this.moviesName = moviesName);
+      {
+        console.log(this.moviesName);
+
+      }
   }
 
+  saveMovie(title: string, date:string, poster:string)
+  {
+    console.log("inside saveMovie")
+    this.MoviesService.saveFavMovie(title,date,poster).subscribe(
+       data => {
+         // refresh the list
+         return true;
+       },
+       error => {
+         console.error("Error saving movie!");
+         return Observable.throw(error);
+       }
+    );
+  }
 }

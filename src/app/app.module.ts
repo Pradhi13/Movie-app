@@ -35,7 +35,11 @@ import { MoviesService } from './movies/movies.service';
     RouterModule.forRoot([
       {
         path: 'search/:movieName',  component: MoviesComponent
-      }
+      },
+
+      // {
+      //   path:'favourite', component: MoviesComponent
+      // }
     ])
   ],
   providers: [MoviesService],

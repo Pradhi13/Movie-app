@@ -1,11 +1,20 @@
 
 <!--displaying movie details-->
+
+
+
 <md-card id="card" *ngFor="let mov of moviesName">
 
     <md-card-header>
-        <md-card-title>{{mov.Title}}</md-card-title>
-        <md-card-subtitle>{{mov.Year}}</md-card-subtitle>
+
+        <md-card-title>{{mov.title}}</md-card-title>
+        <md-card-subtitle>{{mov.release_date}}</md-card-subtitle>
 
     </md-card-header>
-     <img md-card-image src="{{mov.Poster}}">
+
+     <img md-card-image src="{{mov.poster_path}}">
+
+     <!-- <textarea id="text"></textarea> -->
+     <br><button md-button id="save" (click) = "saveMovie(mov.title,mov.release_date,mov.poster_path)">save</button>
+     <!-- <button md-button>update</button> -->
   </md-card>

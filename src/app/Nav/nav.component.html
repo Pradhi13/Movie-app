@@ -1,5 +1,14 @@
 <!--Both Home and About Nav bars-->
-<span class="head"><button md-button>Home</button></span>
-<span class="head"><button md-button>About</button></span>
+<md-toolbar color= "primary">
+  <span class="head"><button md-button>Home</button></span>
+<span class="head"><button md-button (click)="result()">Favmovie</button></span>
     <!--Move to movie component-->
     <app-search-details></app-search-details>
+  </md-toolbar>
+
+      <div *ngIf="a">
+        <div *ngFor="let movie of a">
+
+          {{movie.title}}
+        </div>
+      </div>
