@@ -12,7 +12,7 @@
 
     </md-card-header>
 
-     <img md-card-image src="{{mov.poster_path}}">
+     <img md-card-image [src]="'http://image.tmdb.org/t/p/w92'+mov.poster_path">
 
      <!-- <textarea id="text"></textarea> -->
      <br><button md-button id="save" (click) = "saveMovie(mov.title,mov.release_date,mov.poster_path)">save</button>

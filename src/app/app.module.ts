@@ -10,7 +10,7 @@ import { NavComponent } from './Nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MoviesService } from './movies/movies.service';
-
+import { FavmovieComponent } from './movies/favmovie.component';
 
 
 
@@ -20,6 +20,7 @@ import { MoviesService } from './movies/movies.service';
     NavComponent,
     SearchComponent,
     MoviesComponent,
+    FavmovieComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +38,10 @@ import { MoviesService } from './movies/movies.service';
         path: 'search/:movieName',  component: MoviesComponent
       },
 
-      // {
-      //   path:'favourite', component: MoviesComponent
-      // }
+
+      {
+        path:'favourite', component: FavmovieComponent
+      }
     ])
   ],
   providers: [MoviesService],
